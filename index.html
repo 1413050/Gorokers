@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoroKers- Grocery Super Market</title>
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+</head>
+
+<div class="bg-slate-300">
+
+
+    <header>
+        <nav class="flex  md:space-x-96 justify-between ">
+
+            <span class="font-extrabold text-2xl lg:text-4xl">GoroKers</span>
+
+
+            <ul class="flex flex-col font-semibold fixed bg-purple-500 -right-full top-24 text-xl p-3 lg:absolute lg:top-4 lg:right-56 lg:bg-transparent lg:flex-row text-white lg:text-black"
+                id="navbar-ul">
+
+                <li class="py-2  px-14  lg:px-2 lg:py-0  hover:bg-white hover:text-purple-500"><a href="#home">Home</a>
+                </li>
+                <li class="py-2  px-14  lg:px-2 lg:py-0  hover:bg-white hover:text-purple-500"><a
+                        href="#features">Features</a></li>
+                <li class="py-2  px-14  lg:px-2 lg:py-0  hover:bg-white hover:text-purple-500"><a
+                        href="#products">Products</a></li>
+                <li class="py-2  px-14  lg:px-2 lg:py-0  hover:bg-white hover:text-purple-500"><a
+                        href="#categories">Categories</a></li>
+                <li class="py-2  px-14  lg:px-2 lg:py-0  hover:bg-white hover:text-purple-500"><a
+                        href="#reviews">Reviews</a></li>
+                <li class="py-2  px-14  lg:px-2 lg:py-0  hover:bg-white hover:text-purple-500"><a
+                        href="#blogs">Blogs</a></li>
+
+            </ul>
+
+
+
+            <div class="flex  text-xl">
+
+                <a href="#" class=" py-2 px-3 mx-1 hover:bg-purple-500 hover:text-white bg-gray-300" id="nav-search"><i
+                        class="fa fa-search"></i></a>
+                <a href="#" class=" py-2 px-3 mx-1 hover:bg-purple-500 hover:text-white bg-gray-300" id="nav-cart"><i
+                        class="fa fa-shopping-cart"></i></a>
+                <a href="#" class=" py-2 px-3 mx-1 hover:bg-purple-500 hover:text-white bg-gray-300" id="nav-user"><i
+                        class="fa  fa-user"></i></a>
+                <a href="#" class="py-2 px-3 mx-1 hover:bg-purple-500 hover:text-white bg-gray-300 lg:hidden"
+                    id="nav-bar"><i class="fa  fa-bars"></i></a>
+            </div>
+
+         <div class="black"></div>
+         
+            <div class="fixed  top-24 flex w-full -right-full h-12 bg-white border-2 border-purple-500 rounded-lg p-2 "
+                id="search-bar">
+                <input type="search" class=" outline-none w-11/12 md:w-full bg-none border-none" id="search-input"
+                    placeholder="Search Now">
+                <label for="search-input" class="text-xl hover:text-purple-500"><i class="fa fa-search"></i></label>
+            </div>
+
+
+
+            <div id="navbar-login"class="fixed top-24 flex flex-col shadow-2xl bg-white -right-full w-[21rem] h-72 justify-center py-6  px-4 lg:w-[27rem] lg:h-96">
+                <span class="text-center mb-2 font-semibold text-2xl text-purple-500 lg:text-4xl">Login Now</span>
+                <form action="#!" >
+                    <input type="email"
+                        class="bg-transparent  outline-none w-full border-2 border-purple-500 my-2 text-md text-black px-3 py-2 lg:py-3 lg:text-lg lg:px-4 rounded-lg lg:my-3"
+                        required placeholder="Enter Your E-mail">
+                    <input type="password"
+                        class="bg-transparent  outline-none w-full border-2 border-purple-500 my-2 text-md text-black px-3 py-2 lg:py-3 lg:text-lg lg:px-4 rounded-lg lg:my-3 "
+                        required placeholder="Enter Your Password">
+                 <button class="block mx-auto border-2 border-black px-4 rounded-xl py-1 my-2 font-semibold hover:text-purple-500 lg:py-2 lg:px-8 lg:text-xl" type="submit">Log In</button>
+
+                    <hr class="my-3"
+                    >
+
+                    <span class="font-sans text-lg font-extralight lg:font-normal"> Dont have existing account ?</span> <a
+                        class="font-sans text-purple-500 hover:border-b-2 lg:text-xl lg:font-bold cursor-pointer border-purple-500"> Create Now</a>
+                </form>
+            </div>
+
+
+
+            <div id="navbar-cart" class="fixed flex top-24 flex-col shadow-2xl bg-white lg:w-96 lg:h-[37rem] h-[34rem] py-6  px-4 -right-full w-[22rem]">
+
+                <span class="text-center font-black text-4xl text-purple-500">Add To Cart</span> 
+
+                <div class="watermelon-cart flex lg:my-4 my-2 items-center gap-6 text-xl text-black">
+                    <img src="./assets/watermelon.png" alt="watermelon" class="w-32 h-24">
+
+                    <div class="price">
+                        <p class=" font-semibold my-2">Watermelon</p>
+                        <p class=" font-semibold text-sm"> $4.99 /- QTY = 1</p>
+                    </div>
+
+                  <div class="bin">
+                    <i class="fa fa-trash cursor-pointer hover:text-purple-500"></i>
+                  </div>
+                </div>
+
+
+
+
+                <div class="eggs-cart flex lg:my-4 my-2 items-center gap-7 text-xl text-black">
+                    <img src="./assets/fresh-eggs.png" alt="watermelon" class="w-32 h-24">
+
+                    <div class="price">
+                        <p class=" font-semibold my-2">Eggs Crate</p>
+                        <p class=" font-semibold text-sm"> $7.41 /- QTY = 1</p>
+                    </div>
+
+                  <div class="bin">
+                    <i class="fa fa-trash cursor-pointer hover:text-purple-500"></i>
+                  </div>
+                </div>
+
+
+                <div class="oil-cart flex lg:my-4 my-2 items-center gap-6 text-xl text-black">
+                    <img src="./assets/olive oil.png" alt="watermelon" class="w-32 h-24">
+
+                    <div class="price">
+                        <p class=" font-semibold my-2">Olive Oil</p>
+                        <p class=" font-semibold text-sm"> $18.99 /- QTY = 1</p>
+                    </div>
+
+                  <div class="bin">
+                    <i class="fa fa-trash cursor-pointer hover:text-purple-500"></i>
+                  </div>
+                </div>
+<hr>
+
+<div class="Total my-4 flex flex-col items-center justify-center text-black">
+<span class="text-2xl  text-center "> Total = "$36.38 /-"</span>
+
+<button class="border-4 border-black text-lg font-extrabold px-8 py-2 my-5  hover:text-purple-500 hover:bg-white">Purchase Now</button>
+</div>
+
+            </div>
+        </nav>
+
+
+    </header>
+
+ <!-- //////////// HOME SECTION/////////////////// -->
+    <div class="section-home h-80 px-2 bg-opacity-50 lg:h-96 " id="home">
+
+        <div class="flex flex-col items-center">
+            <span class="text-purple-500 font-black text-3xl text-center"><span class="text-white"> Fresh & </span>
+                Organic Products <span class="text-white"> For You </span></span>
+
+            <p class="text-center  mt-3 font-semibold">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Dignissimos necessitatibus accusamus illum .</p>
+            <span
+                class="mt-4 border-2 px-3 py-2 lg:px-5 lg:py-3 hover:bg-purple-500 cursor-pointer hover:text-white font-extrabold">Shop
+                Now <i class="fa fa-shopping-cart"></i></span>
+        </div>
+
+    </div>
+
+ <!-- //////////// FEATURES /////////////////// -->
+    <div class="section-feature mt-[23rem] flex-col mb-10 lg:mt-[29rem]" id="features">
+        <span class="text-purple-500 text-4xl font-black">Our <span class="features"> Features </span></span>
+
+        <div class="F-container flex flex-col justify-center items-center lg:flex-row lg:gap-5 px-5 mt-12">
+
+            <div class="Organic-fruits flex justify-center items-center flex-col bg-white w-11/12 p-4  lg:mt-5">
+
+                <img src="./assets/fruits.jpg" class="w-full mb-3 h-48 md:h-80 " alt="Fresh Fuits">
+                <span class="text-purple-500 font-extrabold text-2xl">Organic & Fresh</span><br>
+                <small class="text-center text-lg">constetur adipisicing elit. Blanditiis, accusantium? Quasi,
+                    obcaecati. Lorem</small><br>
+                <button
+                    class="bg-purple-500 text-lg px-3 py-2 text-white border-2 border-purple-500 hover:text-black hover:bg-white">Read
+                    More</button>
+
+            </div>
+
+            <div class="Fast-delivery flex justify-center items-center flex-col bg-white w-11/12 p-4 mt-5">
+
+                <img src="./assets/delivery.png" class="w-full mb-3 h-48 md:h-80 " alt="Fresh Fuits">
+                <span class="text-purple-500 font-extrabold text-2xl">Fast & Free Delivery</span><br>
+                <small class="text-center text-lg">constetur adipisicing elit. Blanditiis, accusantium? Quasi,
+                    obcaecati. Lorem</small><br>
+                <button
+                    class="bg-purple-500 text-lg px-3 py-2 text-white border-2 border-purple-500 hover:text-black hover:bg-white">Read
+                    More</button>
+
+            </div>
+
+            <div class="Easy-payment flex justify-center items-center flex-col bg-white w-11/12 p-4 mt-5">
+
+                <img src="./assets/easy-payment (1).png" class="w-full mb-3 h-48 md:h-80 " alt="Fresh Fuits">
+                <span class="text-purple-500 font-extrabold text-2xl text-center">Easy Payment Methods</span><br>
+                <small class="text-center text-lg">constetur adipisicing elit. Blanditiis, accusantium? Quasi,
+                    obcaecati. Lorem</small><br>
+                <button
+                    class="bg-purple-500 text-lg px-3 py-2 text-white border-2 border-purple-500 hover:text-black hover:bg-white">Read
+                    More</button>
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+    <!-- //////////// PRODUCTS /////////////////// -->
+    <div class="section-product   flex-col my-28" id="products">
+        <span class="text-purple-500 text-4xl font-black pb-5 ">Our <span class="product"> Products </span></span>
+
+        <!-- Swiper -->
+        <div class="swiper mySwiper px-5 mt-5">
+
+            <div class="swiper-wrapper flex swiper-wrapper lg:flex-row items-center ">
+
+
+                <div
+                    class="swiper-slide product-box  p-5 my-5 bg-white flex justify-center items-center w-full h-full">
+
+
+                    <div
+                        class="products  bg-white flex w-11/12 h-4/5 items-center flex-col  border-8 border-purple-500 border-double p-2">
+                        <img src="./assets/fresh-eggs.png" alt="eggs" class=" w-full h-40">
+                        <span class="text-purple-500 font-black text-2xl">Fresh Eggs</span>
+                        <p class="text-xl font-extrabold my-4">$ 7.41 -/</p>
+                        <span class="text-xl text-yellow-400"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star-half-o"></i></span>
+                        <button
+                            class="font-extrabold px-5 rounded-md border-purple-500 hover:text-purple-500 py-2 my-3 border-2">Add
+                            To Cart</button>
+                    </div>
+
+
+                </div>
+
+
+                <div
+                    class="swiper-slide product-box  p-5 my-5 bg-white flex justify-center items-center w-full h-full">
+
+
+                    <div
+                        class="products  bg-white flex w-11/12 h-4/5 items-center flex-col border-8 border-purple-500 border-double p-2">
+                        <img src="./assets/fresh-chicken.png" alt="Chicken" class=" w-full h-40">
+                        <span class="text-purple-500 font-black text-2xl">Fresh Chicken</span>
+                        <p class="text-xl font-extrabold my-4">$ 3.05 -/</p>
+                        <span class="text-xl text-yellow-400"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star-half-o"></i></span>
+                        <button
+                            class="font-extrabold px-5 rounded-md border-purple-500 hover:text-purple-500 py-2 my-3 border-2">Add
+                            To Cart</button>
+                    </div>
+
+
+                </div>
+
+
+
+                <div
+                    class="swiper-slide product-box  p-5 my-5 bg-white flex justify-center items-center w-full h-full">
+
+
+                    <div
+                        class="products  bg-white flex w-11/12 h-4/5 items-center flex-col  border-8 border-purple-500 border-double p-2">
+                        <img src="./assets/fresh-meat.png" alt="meat" class=" w-full h-40">
+                        <span class="text-purple-500 font-black text-2xl">Fresh Meat</span>
+                        <p class="text-xl font-extrabold my-4">$ 4.99 -/</p>
+                        <span class="text-xl text-yellow-400"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star-half-o"></i></span>
+                        <button
+                            class="font-extrabold px-5 rounded-md border-purple-500 hover:text-purple-500 py-2 my-3 border-2">Add
+                            To Cart</button>
+                    </div>
+
+
+                </div>
+
+
+
+                <div
+                    class="swiper-slide product-box  p-5 my-5  bg-white flex justify-center items-center w-full h-full">
+
+
+                    <div
+                        class="products  bg-white flex w-11/12 h-4/5 items-center flex-col border-8 border-purple-500 border-double p-2">
+                        <img src="./assets/olive oil.png" alt="Olive oil" class=" w-full h-40">
+                        <span class="text-purple-500 font-black text-2xl">Olive Oil</span>
+                        <p class="text-xl font-extrabold my-4">$ 18.99 -/</p>
+                        <span class="text-xl text-yellow-400"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star-half-o"></i></span>
+                        <button
+                            class="font-extrabold px-5 rounded-md border-purple-500 hover:text-purple-500 py-2 my-3 border-2">Add
+                            To Cart</button>
+                    </div>
+
+
+                </div>
+
+
+                <div
+                    class="swiper-slide product-box  p-5 my-5 bg-white flex justify-center items-center w-full h-full">
+
+
+                    <div
+                        class="products  bg-white flex w-11/12 h-4/5 items-center flex-col border-8 border-purple-500 border-double p-2">
+                        <img src="./assets/onion.png" alt="Onion" class=" w-full h-40">
+                        <span class="text-purple-500 font-black text-2xl">Fresh Onion</span>
+                        <p class="text-xl font-extrabold my-4">$ 2.99 -/</p>
+                        <span class="text-xl text-yellow-400"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star-half-o"></i></span>
+                        <button
+                            class="font-extrabold px-5 rounded-md border-purple-500 hover:text-purple-500 py-2 my-3 border-2">Add
+                            To Cart</button>
+                    </div>
+
+
+                </div>
+
+                <div
+                    class="swiper-slide product-box  p-5 my-5  bg-white flex justify-center items-center w-full h-full">
+
+
+                    <div
+                        class="products  bg-white flex w-11/12 h-4/5 items-center flex-col   border-8 border-purple-500 border-double p-2">
+                        <img src="./assets/tomato.png" alt="tomato" class=" w-full h-40">
+                        <span class="text-purple-500 font-black text-2xl">Fresh Tomato</span>
+                        <p class="text-xl font-extrabold my-4">$ 2.79 -/</p>
+                        <span class="text-xl text-yellow-400"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star-half-o"></i></span>
+                        <button
+                            class="font-extrabold px-5 rounded-md border-purple-500 hover:text-purple-500 py-2 my-3 border-2">Add
+                            To Cart</button>
+                    </div>
+
+
+                </div>
+
+                <div
+                    class="swiper-slide product-box  p-5 my-5  bg-white flex justify-center items-center w-full h-full">
+
+
+                    <div
+                        class="products  bg-white flex w-11/12 h-4/5 items-center flex-col  border-8 border-purple-500 border-double p-2">
+                        <img src="./assets/carrot.png" alt="carrots" class=" w-full h-40">
+                        <span class="text-purple-500 font-black text-2xl">Carrot's Bucket</span>
+                        <p class="text-xl font-extrabold my-4">$ 8.11 -/</p>
+                        <span class="text-xl text-yellow-400"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star-half-o"></i></span>
+                        <button
+                            class="font-extrabold px-5 rounded-md border-purple-500 hover:text-purple-500 py-2 my-3 border-2">Add
+                            To Cart</button>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <!-- Swiper 2 -->
+        <div class="swiper mySwiper px-5">
+
+            <div class="swiper-wrapper flex swiper-wrapper lg:flex-row items-center ">
+
+
+                <div
+                    class="swiper-slide product-box  p-5 my-5 bg-white flex justify-center items-center w-full h-full">
+
+
+                    <div
+                        class="products  bg-white flex w-11/12 h-4/5 items-center flex-col   border-8 border-purple-500 border-double p-2">
+                        <img src="./assets/potato.png" alt="eggs" class=" w-full h-40">
+                        <span class="text-purple-500 font-black text-2xl">Fresh Potatoes</span>
+                        <p class="text-xl font-extrabold my-4">$ 1.41 -/</p>
+                        <span class="text-xl text-yellow-400"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star-half-o"></i></span>
+                        <button
+                            class="font-extrabold px-5 rounded-md border-purple-500 hover:text-purple-500 py-2 my-3 border-2">Add
+                            To Cart</button>
+                    </div>
+
+
+                </div>
+
+
+                <div
+                    class="swiper-slide product-box  p-5 my-5 bg-white flex justify-center items-center w-full h-full">
+
+
+                    <div
+                        class="products  bg-white flex w-11/12 h-4/5 items-center flex-col  border-8 border-purple-500 border-double p-2">
+                        <img src="./assets/letuce.png" alt="meat" class=" w-full h-40">
+                        <span class="text-purple-500 font-black text-2xl">Fresh Lettuce</span>
+                        <p class="text-xl font-extrabold my-4">$ 1.05 -/</p>
+                        <span class="text-xl text-yellow-400"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star-half-o"></i></span>
+                        <button
+                            class="font-extrabold px-5 rounded-md border-purple-500 hover:text-purple-500 py-2 my-3 border-2">Add
+                            To Cart</button>
+                    </div>
+
+
+                </div>
+
+
+
+                <div
+                    class="swiper-slide product-box  p-5 my-5 bg-white flex justify-center items-center w-full h-full">
+
+
+                    <div
+                        class="products  bg-white flex w-11/12 h-4/5 items-center flex-col  border-8 border-purple-500 border-double p-2">
+                        <img src="./assets/watermelon.png" alt="meat" class=" w-full h-40">
+                        <span class="text-purple-500 font-black text-2xl">Watermelon</span>
+                        <p class="text-xl font-extrabold my-4">$ 4.99 -/</p>
+                        <span class="text-xl text-yellow-400"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star-half-o"></i></span>
+                        <button
+                            class="font-extrabold px-5 rounded-md border-purple-500 hover:text-purple-500 py-2 my-3 border-2">Add
+                            To Cart</button>
+                    </div>
+
+
+                </div>
+
+
+
+                <div
+                    class="swiper-slide product-box  p-5 my-5  bg-white flex justify-center items-center w-full h-full">
+
+
+                    <div
+                        class="products  bg-white flex w-11/12 h-4/5 items-center flex-col  border-8 border-purple-500 border-double p-2">
+                        <img src="./assets/freshchilli.png" alt="meat" class=" w-full h-40">
+                        <span class="text-purple-500 font-black text-2xl">Chillies</span>
+                        <p class="text-xl font-extrabold my-4">$ 1.99 -/</p>
+                        <span class="text-xl text-yellow-400"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star-half-o"></i></span>
+                        <button
+                            class="font-extrabold px-5 rounded-md border-purple-500 hover:text-purple-500 py-2 my-3 border-2">Add
+                            To Cart</button>
+                    </div>
+
+
+                </div>
+
+
+                <div
+                    class="swiper-slide product-box  p-5 my-5  bg-white flex justify-center items-center w-full h-full">
+
+
+                    <div
+                        class="products  bg-white flex w-11/12 h-4/5 items-center flex-col  border-8 border-purple-500 border-double p-2">
+                        <img src="./assets/fresh-eggplant.png" alt="meat" class=" w-full h-40">
+                        <span class="text-purple-500 font-black text-2xl">Fresh Egg Plant</span>
+                        <p class="text-xl font-extrabold my-4">$ 6.99 -/</p>
+                        <span class="text-xl text-yellow-400"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star-half-o"></i></span>
+                        <button
+                            class="font-extrabold px-5 rounded-md border-purple-500 hover:text-purple-500 py-2 my-3 border-2">Add
+                            To Cart</button>
+                    </div>
+
+
+                </div>
+
+                <div
+                    class="swiper-slide product-box  p-5 my-5  bg-white flex justify-center items-center w-full h-full">
+
+
+                    <div
+                        class="products  bg-white flex w-11/12 h-4/5 items-center flex-col  border-8 border-purple-500 border-double p-2">
+                        <img src="./assets/mangoes.png" alt="meat" class=" w-full h-40">
+                        <span class="text-purple-500 font-black text-2xl">Fresh Mangoes</span>
+                        <p class="text-xl font-extrabold my-4">$ 5.79 -/</p>
+                        <span class="text-xl text-yellow-400"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star-half-o"></i></span>
+                        <button
+                            class="font-extrabold px-5 rounded-md border-purple-500 hover:text-purple-500 py-2 my-3 border-2">Add
+                            To Cart</button>
+                    </div>
+
+
+                </div>
+
+                <div
+                    class="swiper-slide product-box  p-5 my-5  bg-white flex justify-center items-center w-full h-full">
+
+
+                    <div
+                        class="products  bg-white flex w-11/12 h-4/5 items-center flex-col  border-8 border-purple-500 border-double p-2">
+                        <img src="./assets/fresh-cucumber.png" alt="meat" class=" w-full h-40">
+                        <span class="text-purple-500 font-black text-2xl">Cucumbers</span>
+                        <p class="text-xl font-extrabold my-4">$ 3.11 -/</p>
+                        <span class="text-xl text-yellow-400"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star-half-o"></i></span>
+                        <button
+                            class="font-extrabold px-5 rounded-md border-purple-500 hover:text-purple-500 py-2 my-3 border-2">Add
+                            To Cart</button>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- //////////// CATEGORIES /////////////////// -->
+
+
+    <div class="section-Categories  flex-col my-28" id="categories">
+
+        <span class="text-purple-500 text-4xl font-black">Our <span class="features"> Categories </span></span>
+
+        <div class="CG-container flex flex-col justify-center items-center lg:flex-row lg:gap-5 px-5 mt-12 mb-5">
+
+            <div class="Organic-fruits flex justify-center items-center flex-col bg-white w-11/12 p-4  mt-5">
+
+                <img src="./assets/vegetables product.png" class="w-full mb-3  md:h-48 " alt="Fresh Fuits">
+                <span class="text-purple-500 font-extrabold text-2xl">Vegetables</span><br>
+                <small class="text-center text-lg font-semibold"> Upto 25% Off</small><br>
+                <button
+                    class="bg-purple-500 text-lg px-3 py-2 text-white border-2 border-purple-500 hover:text-black hover:bg-white font-semibold">Purchase
+                    Now</button>
+
+            </div>
+
+            <div class="Fast-delivery flex justify-center items-center flex-col bg-white w-11/12 p-4 mt-5">
+
+                <img src="./assets/fruits-product.png" class="w-full mb-3 md:h-48 " alt="Fresh Fuits">
+                <span class="text-purple-500 font-extrabold text-2xl">Tasty Fruits</span><br>
+                <small class="text-center text-lg font-semibold"> Upto 25% Off</small><br>
+                <button
+                    class="bg-purple-500 text-lg px-3 py-2 text-white border-2 border-purple-500 hover:text-black hover:bg-white font-semibold">Purchase
+                    Now</button>
+
+            </div>
+
+            <div class="Organic-fruits flex justify-center items-center flex-col bg-white w-11/12 p-4  mt-5">
+
+                <img src="./assets/meat products.png" class="w-full mb-3  md:h-48 " alt="Fresh Fuits">
+                <span class="text-purple-500 font-extrabold text-2xl"> Meat & Chicken</span><br>
+                <small class="text-center text-lg font-semibold"> Upto 25% Off</small><br>
+                <button
+                    class="bg-purple-500 text-lg px-3 py-2 text-white border-2 border-purple-500 hover:text-black hover:bg-white font-semibold">Purchase
+                    Now</button>
+
+            </div>
+
+            <div class="Fast-delivery flex justify-center items-center flex-col bg-white w-11/12 p-4 mt-5">
+
+                <img src="./assets/dairy product.png" class="w-full mb-3  md:h-48 " alt="Fresh Fuits">
+                <span class="text-purple-500 font-extrabold text-2xl">Dairy Products</span><br>
+                <small class="text-center text-lg font-semibold"> Upto 25% Off</small><br>
+                <button
+                    class="bg-purple-500 text-lg px-3 py-2 text-white border-2 border-purple-500 hover:text-black hover:bg-white font-semibold">Purchase
+                    Now</button>
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+    <!-- //////////// REVIEWS /////////////////// -->
+
+    <div class="section-reviews   flex-col my-28 " id="reviews">
+        <span class="text-purple-500 lg:text-4xl text-xl font-black pb-10 text-center">Customer's <span
+                class="product text-4xl"> Reviews </span></span>
+
+        <!-- Swiper  -->
+        <div class="swiper mySwiper px-5">
+
+            <div class="swiper-wrapper flex swiper-wrapper lg:flex-row items-center ">
+
+
+                <div
+                    class="swiper-slide product-box  p-5 my-5 bg-white flex justify-center items-center w-full h-full hover:border-4 hover:border-purple-500">
+
+
+                    <div
+                        class="products  bg-white flex w-11/12 h-5/6 items-center flex-col  border-4 border-slate-500 border-dotted p-2 hover:border-none">
+                        <img src="./assets/customer-1.jpg" alt="customer" class=" w-32 h-32 border-4 border-purple-500">
+                        <p class="text-xl font-semibold my-4 text-center">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Non, maxime?</p>
+                        <span class="text-purple-500 font-black text-2xl my-2">Jenifer Rodes</span>
+                        <span class="text-xl text-yellow-400 "><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star-half-o"></i></span>
+
+                    </div>
+
+
+                </div>
+
+                <div
+                    class="swiper-slide product-box  p-5 my-5 bg-white flex justify-center items-center w-full h-full hover:border-4 hover:border-purple-500">
+
+
+                    <div
+                        class="products  bg-white flex w-11/12 h-5/6 items-center flex-col  border-4 border-slate-500 border-dotted p-2 hover:border-none">
+                        <img src="./assets/customer-2.jpg" alt="customer" class=" w-32 h-32 border-4 border-purple-500">
+                        <p class="text-xl font-semibold my-4 text-center">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Non, maxime?</p>
+                        <span class="text-purple-500 font-black text-2xl my-2">Hawkin brid</span>
+                        <span class="text-xl text-yellow-400 "><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star-half-o"></i></span>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+                <div
+                    class="swiper-slide product-box  p-5 my-5 bg-white flex justify-center items-center w-full h-full hover:border-4 hover:border-purple-500">
+
+
+                    <div
+                        class="products  bg-white flex w-11/12 h-5/6 items-center flex-col  border-4 border-slate-500 border-dotted p-2 hover:border-none">
+                        <img src="./assets/customer-3.jpg" alt="customer" class=" w-32 h-32 border-4 border-purple-500">
+                        <p class="text-xl font-semibold my-4 text-center">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Non, maxime?</p>
+                        <span class="text-purple-500 font-black text-2xl my-2">Hela Charles</span>
+                        <span class="text-xl text-yellow-400 "><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i
+                                class="fa fa-star-o"></i></span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div
+                    class="swiper-slide product-box  p-5 my-5 bg-white flex justify-center items-center w-full h-full hover:border-4 hover:border-purple-500">
+
+
+                    <div
+                        class="products  bg-white flex w-11/12 h-5/6 items-center flex-col  border-4 border-slate-500 border-dotted p-2 hover:border-none">
+                        <img src="./assets/customer-4.jpg" alt="customer" class=" w-32 h-32 border-4 border-purple-500">
+                        <p class="text-xl font-semibold my-4 text-center">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Non, maxime?</p>
+                        <span class="text-purple-500 font-black text-2xl my-2">William Jonson</span>
+                        <span class="text-xl text-yellow-400 "><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+                <div
+                    class="swiper-slide product-box  p-5 my-5 bg-white flex justify-center items-center w-full h-full hover:border-4 hover:border-purple-500">
+
+
+                    <div
+                        class="products  bg-white flex w-11/12 h-5/6 items-center flex-col  border-4 border-slate-500 border-dotted p-2 hover:border-none">
+                        <img src="./assets/customer-5.png" alt="customer" class=" w-32 h-32 border-4 border-purple-500">
+                        <p class="text-xl font-semibold my-4 text-center">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Non, maxime?</p>
+                        <span class="text-purple-500 font-black text-2xl my-2">Elzibeth Odin</span>
+                        <span class="text-xl text-yellow-400 "><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i
+                                class="fa fa-star-o"></i></span>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+                <div
+                    class="swiper-slide product-box  p-5 my-5 bg-white flex justify-center items-center w-full h-full hover:border-4 hover:border-purple-500">
+
+
+                    <div
+                        class="products  bg-white flex w-11/12 h-5/6 items-center flex-col  border-4 border-slate-500 border-dotted p-2 hover:border-none">
+                        <img src="./assets/customer-6.webp" alt="customer"
+                            class=" w-32 h-32 border-4 border-purple-500">
+                        <p class="text-xl font-semibold my-4 text-center">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Non, maxime?</p>
+                        <span class="text-purple-500 font-black text-2xl my-2">Chris Tone </span>
+                        <span class="text-xl text-yellow-400 "><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star-half-o"></i></span>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- //////////// BLOGS /////////////////// -->
+    <div class="section-blogs   flex-col mt-28" id="blogs">
+        <span class="text-purple-500 text-4xl  font-black pb-10 text-center">Our <span class="product text-4xl"> Blogs
+            </span></span>
+
+        <div class="blog-content flex flex-col justify-center items-center px-5 mb-5 lg:flex-row lg:gap-4">
+
+
+            <div class="blog-area flex flex-col w-full h-full  bg-white my-3 hover:shadow-2xl">
+                <img src="./assets/content-1.jpg" alt="blog" class="object-cover h-72">
+
+                <div class="blog-desp px-3">
+                    <div class="blog-date flex space-x-32 my-2 lg:space-x-44">
+                        <div class="client font-semibold text-sm">
+                            <i class="fa fa-user text-purple-500"></i> by client
+                        </div>
+                        <div class="calendar  font-semibold text-sm">
+                            <i class="fa fa-calendar text-purple-500 text-end"></i> 1<sup>st</sup> June 2023
+                        </div>
+                    </div>
+                     
+                    <hr class="my-2">
+                    <span class="text-3xl text-purple-500 font-black ">Fresh Vegetables</span>
+                    <p class="my-2 text-lg font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, cum!</p>
+
+                    <button  class="text-red-500 border-2 border-purple-500 px-4 py-2 font-semibold hover:text-white hover:bg-purple-500 hover:border-white my-3">Read More..</button>
+                </div>
+            </div>
+
+            <div class="blog-area flex flex-col w-full h-full  bg-white my-3  hover:shadow-2xl">
+                <img src="./assets/content-2.jpg" alt="blog" class="object-cover h-72">
+
+                <div class="blog-desp px-3">
+                    <div class="blog-date flex space-x-28 my-2 lg:space-x-44">
+                        <div class="client font-semibold text-sm">
+                            <i class="fa fa-user text-purple-500"></i> by client
+                        </div>
+                        <div class="calendar  font-semibold text-sm">
+                            <i class="fa fa-calendar text-purple-500 text-end"></i> 10<sup>th</sup> May 2023
+                        </div>
+                    </div>
+                     
+                    <hr class="my-2">
+                    <span class="text-3xl text-purple-500 font-black ">Sweet Fruits</span>
+                    <p class="my-2 text-lg font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, cum!</p>
+
+                    <button  class="text-red-500 border-2 border-purple-500 px-4 py-2 font-semibold hover:text-white hover:bg-purple-500 hover:border-white my-3">Read More..</button>
+                </div>
+            </div>
+
+
+            
+            <div class="blog-area flex flex-col w-full h-full  bg-white my-3  hover:shadow-2xl">
+                <img src="./assets/content-3.jpg" alt="blog" class="object-cover h-72">
+
+                <div class="blog-desp px-3">
+                    <div class="blog-date flex space-x-28 my-2 lg:space-x-44">
+                        <div class="client font-semibold text-sm">
+                            <i class="fa fa-user text-purple-500"></i> by client
+                        </div>
+                        <div class="calendar  font-semibold text-sm">
+                            <i class="fa fa-calendar text-purple-500 text-end"></i> 23<sup>rd</sup> June 2023
+                        </div>
+                    </div>
+                     
+                    <hr class="my-2">
+                    <span class="text-3xl text-purple-500 font-black ">Tasty & Fresh Dairy</span>
+                    <p class="my-2 text-lg font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, cum!</p>
+
+                    <button  class="text-red-500 border-2 border-purple-500 px-4 py-2 font-semibold hover:text-white hover:bg-purple-500 hover:border-white my-3">Read More..</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+ <!-- //////////// FOOTER /////////////////// -->
+
+<div class="footer flex bg-white mt-8 flex-col items-center px-10 pt-12  w-full h-full justify-center shadow-2xl">
+
+<div class="footer-sections flex flex-col lg:flex-row lg:space-x-10 ">
+
+    <div class="gorokers w-full flex flex-col text-center lg:text-start my-8 lg:my-0">
+        <span class="font-black text-purple-500 text-3xl" style="font-family: 'Orbitron', sans-serif;">Gorokers <i class="fa fa-shopping-basket"></i></span>
+    
+        <div class="gorokers-content my-5">
+            <p class="mb-5 font-semibold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, unde!</p>
+    
+        <div class="flex  text-xl items-center justify-center lg:justify-start">
+    
+            <a href="https://www.facebook.com/azmeer.shah.7/" class=" py-2 px-4 mr-1 hover:bg-purple-500 hover:text-white bg-gray-300" id="facebook"><i
+                    class="fa fa-facebook"></i></a>
+            <a href="mailto:azmeershah621@gmail.com" class=" py-2 px-3 mx-1 hover:bg-purple-500 hover:text-white bg-gray-300" id="nav-cart"><i
+                    class="fa fa-envelope"></i></a>
+            <a href="https://www.instagram.com/azmeer_shah2/?next=%2F" class=" py-2 px-3 mx-1 hover:bg-purple-500 hover:text-white bg-gray-300" id="nav-user"><i
+                    class="fa  fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/azmeer-shah-588495270/" class="py-2 px-3 mx-1 hover:bg-purple-500 hover:text-white bg-gray-300"
+                id="nav-bar"><i class="fa  fa-linkedin"></i></a>
+        </div>
+        </div>
+    
+    
+    </div>
+    
+    
+    <div class="Contact-info w-full flex flex-col text-center lg:text-start my-8 lg:my-0">
+    
+        <span class="font-black text-purple-500 text-3xl " style="font-family: 'Orbitron', sans-serif;">Contact's Info </span>
+        <div class="info my-5">
+    
+            <p class="text-sm mb-4"><i class="fa text-xl text-purple-500 fa-phone"></i> +92 323-0316808</p>
+    
+            <p class="text-sm my-4"><i class="fa text-xl text-purple-500 fa-phone"></i> +92 0321-1234567</p>
+    
+            <p class="text-sm my-4"><i class="fa text-xl text-purple-500 fa-envelope"></i>&nbsp; azmeershah621@gmail.com</p>
+        
+            <p class="text-sm my-4"><i class="fa text-xl text-purple-500 fa-map-marker"></i>&nbsp; Karachi,Pakistan</p>
+        </div>
+    
+    </div>
+    
+    
+    <div class="quick-links w-full flex flex-col text-center lg:text-start my-8 lg:my-0">
+        <span class="font-black text-purple-500 text-3xl" style="font-family: 'Orbitron', sans-serif;">Quick Links</span>
+        <div class="nav-info my-5">
+    
+            <a href="#home" class="block font-semibold hover:translate-x-4 cursor-pointer mb-4"><i class="fa text-xl text-purple-500 fa-arrow-right pr-1" ></i>Home </a>
+            <a href="#features" class="block font-semibold hover:translate-x-4 cursor-pointer my-4"><i class="fa text-xl text-purple-500 fa-arrow-right pr-1"></i>Features</a>
+            <a href="#products" class="block font-semibold hover:translate-x-4 cursor-pointer my-4"><i class="fa text-xl text-purple-500 fa-arrow-right pr-1"></i>Products</a>
+            <a href="#categories" class="block font-semibold hover:translate-x-4 cursor-pointer my-4"><i class="fa text-xl text-purple-500 fa-arrow-right pr-1"></i>Categories</a>
+            <a href="#reviews" class="block font-semibold hover:translate-x-4 cursor-pointer my-4"><i class="fa text-xl text-purple-500 fa-arrow-right pr-1"></i>Reviews</a>
+            <a href="#blogs" class="block font-semibold hover:translate-x-4 cursor-pointer my-4"><i class="fa text-xl text-purple-500 fa-arrow-right pr-1"></i>Blogs</a>
+        </div>
+    </div>
+    
+    
+    <div class="Newsletter w-full flex flex-col text-center lg:text-start my-8 lg:my-0">
+        <span class="font-black text-purple-500 text-3xl" style="font-family: 'Orbitron', sans-serif;">News Letter <i class="fa fa-newspaper"></i></span>
+        <div class="newletter-area my-5">
+            <p class="font-semibold">Subscribe For Latest Updates</p>
+            <form action="#">
+                <input type="email" name="email" id="email" class="w-full bg-slate-200 outline-none py-2 px-2 rounded-md text-lg my-4" placeholder="Enter E-mail">
+                <button class=" py-2 px-4 mr-1 hover:bg-purple-500 hover:text-white bg-gray-300 font-extrabold" type="submit" onclick="alert('you are now subcribe to Gorokers, Thank You')">Subscribe</button>
+                
+            </form>
+        </div>
+
+
+    </div>
+</div>
+ <hr size="10" class="text-gray-600 w-full">
+<div class="credits my-5 text-center flex justify-center items-center">
+   <span class="text-3xl font-black ">Created By <span class="text-purple-500">Azmeer Shah</span> | All Right Reserved &copy;<span class="text-purple-500">2023</span></span>
+    
+</div>
+
+
+</div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            spaceBetween: 20,
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                },
+            },
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/index.js"></script>
+    <script src="https://kit.fontawesome.com/66ede70a5a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    </body>
+
+</html>
